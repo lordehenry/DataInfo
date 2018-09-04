@@ -1,6 +1,8 @@
 
 public class Pessoa {
 
- String meucu;	
-
+ String aa;	
+ int c;
+ int a;
+ int b;
 }
