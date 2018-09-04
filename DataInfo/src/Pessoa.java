@@ -1,6 +1,6 @@
 
 public class Pessoa {
 
- String MANODOCU;	
-
+ String aa;	
+ int c;
 }
