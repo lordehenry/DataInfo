@@ -4,6 +4,7 @@ public class Pessoa {
 	private char nome;
 	private int idade;
 	private int cpf;
+	
 	public char getNome() {
 		return nome;
 	}
