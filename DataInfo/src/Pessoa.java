@@ -1,9 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
+import menus.Contato;
 
 public class Pessoa {
 
 	private char nome;
 	private int idade;
 	private int cpf;
+	
 	
 	public char getNome() {
 		return nome;
