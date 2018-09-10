@@ -16,7 +16,7 @@ public class JanelaClientes extends JFrame implements MenuListener, ActionListen
 	private JMenuBar barraMenu;
 	private JMenu menuCliente, menuFuncionario, menuSair;
 	private JMenuItem menuApagar, menuCadastro, menuCadastrafunc, menuDemitefunc;
-	private Principal pcliente = null;
+	private Pessoa pcliente = null;
 
 	
 	public JanelaClientes (String titulo){
@@ -30,9 +30,11 @@ public class JanelaClientes extends JFrame implements MenuListener, ActionListen
 		menuCliente = new JMenu("Cliente");
 		menuCadastro = new JMenuItem("Cadastrar cliente");
 		menuApagar = new JMenuItem("Remover cliente");
+		
 		menuFuncionario = new JMenu("Funcionario");
 		menuCadastrafunc = new JMenuItem("Cadastrar funcionario");
 		menuDemitefunc = new JMenuItem("Demitir funcionario");
+		
 		menuSair = new JMenu("Sair");
 		
 		
@@ -44,7 +46,7 @@ public class JanelaClientes extends JFrame implements MenuListener, ActionListen
 		menuFuncionario.addMenuListener(this);
 		menuFuncionario.addActionListener(this);
 		menuFuncionario.addActionListener(this);
-	//atribuição de itens
+	//atribuicao de itens
 		menuCliente.add(menuCadastro);
 		menuCliente.add(menuApagar);
 		menuFuncionario.add(menuCadastrafunc);
@@ -57,7 +59,7 @@ public class JanelaClientes extends JFrame implements MenuListener, ActionListen
 	
 	public static void main(String[] args){
 	
-	new JanelaClientes ("Menu da aplicação").setVisible(true);
+	new JanelaClientes ("Menu da aplicacao").setVisible(true);
 	
 }	
 @Override
@@ -71,33 +73,9 @@ public void actionPerformed (ActionEvent e){
 	else if (e.getSource()== menuSair){
 		System.exit(0);
 	}
-}
-@Override
-public void menuCanceled(MenuEvent e){
-}
-@Override
-public void menuDeselected (MenuEvent e){
-	if (e.getSource()== menuCadastro){
-		System.out.println("Menu cadastro desselecionado");
-	}
-	else if (e.getSource()== menuSobre);
-		System.out.println("Menu sobre desselecionado");
-	}
-
-@Override
-public void menuSelected(MenuEvent e){
-	
-	if (e.getSource()== menuCadastro){
-	System.out.println("Menu cadastro acionado");
-}
-else if (e.getSource()== menuSobre){
-	System.out.println("Menu sobre selecionado");
-	JOptionPane.showMessageDialog(this, "Créditos do Java");
-}
 		
+	}
 }
-}
-
 
 
 
