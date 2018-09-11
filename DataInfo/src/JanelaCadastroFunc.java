@@ -8,18 +8,13 @@ import javax.swing.JOptionPane;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
-public class JanelaCadastro extends Pessoa {
+public class JanelaCadastroFunc  extends Pessoa{
 	
-	
-	cliente1 = new cliente();
-	cpf1 = new cpf();
-	idade1 = new idade();
-	
+	func1 = new func();
 	
 	cliente1.setNome = JOptionPane.showInputDialog(null, "Digite seu nome");
 	cpf1.setCpf = JOptionPane.showInputDialog(null, "Digite seu CPF");
 	idade1.setIdade = JOptionPane.showInputDialog(null, "Digite sua idade");
-	
-	
-}
 
+
+}

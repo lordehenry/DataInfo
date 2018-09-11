@@ -5,27 +5,28 @@ import menus.Contato;
 
 public class Pessoa {
 
-	private char nome;
-	private int idade;
-	private int cpf;
+	private String nome;
+	private String idade;
+	private String cpf;
 	
 	
-	public char getNome() {
+
+	public String getNome() {
 		return nome;
 	}
-	public void setNome(char nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getIdade() {
+	public String getIdade() {
 		return idade;
 	}
-	public void setIdade(int idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 }
