@@ -8,23 +8,24 @@ import javax.swing.JOptionPane;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
-import menus.Menu;
-import menus.Principal;
-
-public class JanelaClientes extends JFrame implements MenuListener, ActionListener{
+public class Menu extends JFrame implements MenuListener, ActionListener{
 
 	private JMenuBar barraMenu;
 	private JMenu menuCliente, menuFuncionario, menuSair;
 	private JMenuItem menuApagar, menuCadastro, menuCadastrafunc, menuDemitefunc;
-	private Pessoa pcliente = null;
-
+	private Menu pcliente = null;
 	
-	public JanelaClientes (String titulo){
-		
-		super(titulo);
+	public Menu(String titulo)
+	{
+		super(titulo);//Aqui é a chamado ao construtor da
+		//superclasse, deve ser a primeira instrução do construtor
 		this.setBounds(100, 100, 456, 112);
 		iniciar();
-}
+	}
+	
+	
+	
+	
 	public void iniciar(){
 		barraMenu = new JMenuBar();
 		menuCliente = new JMenu("Cliente");
@@ -40,48 +41,61 @@ public class JanelaClientes extends JFrame implements MenuListener, ActionListen
 		
 	//Menus Cliente
 		menuCliente.addMenuListener(this);	
-		menuCliente.addActionListener(this);
-		menuCliente.addActionListener(this);
+		menuCadastro.addActionListener(this);
+		menuApagar.addActionListener(this);
 	//Menus Funcionario
 		menuFuncionario.addMenuListener(this);
-		menuFuncionario.addActionListener(this);
-		menuFuncionario.addActionListener(this);
+		menuCadastrafunc.addActionListener(this);
+		menuDemitefunc.addActionListener(this);
 	//atribuicao de itens
 		menuCliente.add(menuCadastro);
 		menuCliente.add(menuApagar);
 		menuFuncionario.add(menuCadastrafunc);
 		menuFuncionario.add(menuDemitefunc);
 		
+		barraMenu.add(menuFuncionario);
+		barraMenu.add(menuCliente);
+		
 		this.setJMenuBar(barraMenu);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-		menuFuncionario.add(menuCadastrafunc);
-		menuFuncionario.add(menuDemitefunc);
-		menuCadastro.add(menuCadastro);
-		menuCadastro.add(menuApagar);
-		menuCliente.add( menuCliente );
-		menuCadastro.add(menuCadastro);
 		
 }	
 	
 	public static void main(String[] args){
-	
-	new JanelaClientes ("Menu da aplicacao").setVisible(true);
-	
-}	
+		
+		new Menu ("Menu da aplicacao").setVisible(true);
+	}
+
 @Override
 public void actionPerformed (ActionEvent e){
 	
-	if (e.getSource()== menuCadastro){
-		if (pcliente == null){
-			pcliente = new Pessoa (this, "Menu", true);
-		}	
+	if (e.getSource()== menuCadastrafunc){
+		new Funcionario("Cadastrar Funcionario");
+		/*if (pcliente == null){
+		 new Funcionario("Cadastrar Funcionario");
+			
+		}	*/
 	}
 	else if (e.getSource()== menuSair){
 		System.exit(0);
 	}
 		
 	}
+@Override
+public void menuCanceled(MenuEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void menuDeselected(MenuEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void menuSelected(MenuEvent e) {
+	// TODO Auto-generated method stub
+	
+}
 }
 
 

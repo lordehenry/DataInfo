@@ -1,32 +1,21 @@
 import java.util.ArrayList;
 import java.util.List;
-
-import menus.Contato;
+import javax.swing.JLabel;
 
 public class Pessoa {
-
+	
 	private String nome;
-	private String idade;
-	private String cpf;
-	
-	
-
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getIdade() {
-		return idade;
-	}
-	public void setIdade(String idade) {
-		this.idade = idade;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	private double ddd;
+	private double telefone;
+	private String email;
+	private String endereco;
+	private int numero;
+	private String complemento;
+	private String bairro;
+	private String cidade;
+	private String estado;
+	private double cep;
+	private double cpf;
+	private double rg;
+	private double nascimento;
 }
