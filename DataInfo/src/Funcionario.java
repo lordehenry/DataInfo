@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.Container;
 import java.awt.GridLayout;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -10,8 +12,10 @@ import javax.swing.JTextField;
 
 public class Funcionario extends JFrame {
 	
-	
 	private double salario;
+	private double bonus;
+
+
 	private static List<Funcionario>minhaLista = new ArrayList<Funcionario>();
 	private static String titulo;
 
@@ -19,6 +23,8 @@ public class Funcionario extends JFrame {
 	//public void cadastraFunc(){
 	public Funcionario(String titulo) {
 		super(titulo);
+		setSize(640,480); 
+		
 		JTextField campoNome;
 		JTextField campoDDD;
 		JTextField campoTelefone;
@@ -33,6 +39,9 @@ public class Funcionario extends JFrame {
 		JTextField campoCPF;
 		JTextField campoRG;
 	    JTextField campoNascimento;
+	    JTextField campoSalario;
+	    JTextField campoBonus;
+	    
 	    JLabel nome;
 	    JLabel ddd;
 	    JLabel telefone;
@@ -47,6 +56,8 @@ public class Funcionario extends JFrame {
 	    JLabel cpf;
 	    JLabel rg;
 	    JLabel nascimento;
+	    JLabel salario;
+	    JLabel bonus;
 
 			campoNome = new JTextField();
 			campoDDD = new JTextField();
@@ -62,6 +73,9 @@ public class Funcionario extends JFrame {
 			campoCPF = new JTextField();
 			campoRG = new JTextField();
 			campoNascimento = new JTextField();
+			campoSalario = new JTextField();
+			campoBonus = new JTextField();
+			
 			nome = new JLabel("Nome:");
 			ddd = new JLabel("DDD:");
 			telefone = new JLabel("Telefone:");
@@ -76,9 +90,11 @@ public class Funcionario extends JFrame {
 			cpf = new JLabel("CPF:");
 			rg = new JLabel("RG:");
 			nascimento = new JLabel("Nacimento: dd/mm/aa");
+			salario = new JLabel("Salário:");
+			bonus = new JLabel("Bônus:");
 			
 			JPanel panel = new JPanel();
-			panel.setLayout(new GridLayout(14, 2));
+			panel.setLayout(new GridLayout(16, 2));
 			panel.add(nome);
 			panel.add(campoNome);
 			panel.add(email);
@@ -95,7 +111,6 @@ public class Funcionario extends JFrame {
 			panel.add(campoComplemento);
 			panel.add(bairro);
 			panel.add(campoBairro);
-			
 			panel.add(cep);
 			panel.add(campoCep);
 			panel.add(cidade);
@@ -108,6 +123,10 @@ public class Funcionario extends JFrame {
 			panel.add(campoCPF);
 			panel.add(nascimento);
 			panel.add(campoNascimento);
+			panel.add(salario);
+			panel.add(campoSalario);
+			panel.add(bonus);
+			panel.add(campoBonus);
 			
 			this.getContentPane().add(panel);
 			this.setDefaultCloseOperation(EXIT_ON_CLOSE);

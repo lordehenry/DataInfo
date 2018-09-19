@@ -8,8 +8,6 @@ import javax.swing.JOptionPane;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
-import menus.Menu;
-import menus.Principal;
 
 public class JanelaClientes extends JFrame implements MenuListener, ActionListener{
 
@@ -74,7 +72,7 @@ public void actionPerformed (ActionEvent e){
 	
 	if (e.getSource()== menuCadastro){
 		if (pcliente == null){
-			pcliente = new Pessoa (this, "Menu", true);
+			pcliente = new Pessoa ();
 		}	
 	}
 	else if (e.getSource()== menuSair){
@@ -82,6 +80,21 @@ public void actionPerformed (ActionEvent e){
 	}
 		
 	}
+@Override
+public void menuCanceled(MenuEvent arg0) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void menuDeselected(MenuEvent arg0) {
+	// TODO Auto-generated method stub
+	
+}
+@Override
+public void menuSelected(MenuEvent arg0) {
+	// TODO Auto-generated method stub
+	
+}
 }
 
 
